@@ -1,0 +1,29 @@
+{% macro render_formu_login(campo) %}
+	<td> {{ campo.label }}
+	<dd> {{ campo(**kwargs)|safe }}
+
+	{% if campo.errors %}
+		<ul>
+	    	{% for error in campo.errors %}
+	    		<li> {{ error}} </li>
+	    	{% endfor %}
+	    </ul>
+
+	{% endif %}
+	<dd>
+{% endmacro %}
+
+{% macro render_formu_alta_usuario(campo) %}
+	<td> {{ campo.label }}
+	<dd> {{ campo(**kwargs)|safe }}
+
+	{% if campo.errors %}
+		<ul>
+	    	{% for error in campo.errors %}
+	    		<li> {{ error}} </li>
+	    	{% endfor %}
+	    </ul>
+
+	{% endif %}
+	<dd>
+{% endmacro %}
